@@ -1,0 +1,85 @@
+<?php 
+
+include 'config.php';
+
+session_start();
+
+error_reporting(0);
+
+if (isset($_SESSION['uname'])) {
+    header("Location: LocationPreference.php");
+}
+
+if (isset($_POST['submit'])) {
+	$email = $_POST['email'];
+	$password = md5($_POST['password']);
+
+	$sql = "SELECT * FROM user WHERE email='$email' AND password='$password'";
+	$result = mysqli_query($conn, $sql);
+	if ($result->num_rows > 0) {
+		$row = mysqli_fetch_assoc($result);
+		$_SESSION['uname'] = $row['uname'];
+		header("Location: LocationPreference.php");
+	} else {
+		echo "<script>alert('Woops! Email or Password is Wrong.')</script>";
+	}
+}
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style-with-prefix.css">
+    <style>
+        .srouce {
+            text-align: center;
+            color: #ffffff;
+            padding: 10px;
+        }
+        
+        body {
+            background-image: url('samebg.jpg');
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="form-container">
+            <div class="form-body">
+                <form action="" class="the-form">
+
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Enter your email">
+
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Enter your password">
+
+                    <input type="submit" value="Log In">
+                    <div>
+                        <br><br>
+                        <span>Don't have an account?</span> <a href="Register.html">Sign Up</a></span>
+                    </div>
+                </form>
+
+            </div>
+            <!-- FORM BODY-->
+
+            <div class="form-footer">
+
+            </div>
+            <!-- FORM FOOTER -->
+
+        </div>
+        <!-- FORM CONTAINER -->
+    </div>
+
+</body>
+
+</html>

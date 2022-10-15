@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+    <style>
+        .srouce {
+            text-align: center;
+            color: black;
+            padding: 10px;
+        }
+        a:link, a:visited {
+            background-color: beige;
+            color: black;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        a:hover, a:active {
+            background-color: beige;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="inner-header">
+            <nav class="bg-dark navbar-dark">
+                <div class="container">
+                   
+                </div>
+            </nav>
+            <section id="header" class="jumbotron text-center">
+                <h1 class="display-3">Adventure Awaits</h1>
+                <!--<form>
+                    <input type="submit" name="submit" value="Click me to select the city name">
+                </form><br>-->
+                
+                <a href="/second"><b>Click here to select the city name</b></a><br><br>
+                <p class="lead">We are here to suggest you the best ever places to visit</p>
+            </section>
+
+            <section id="gallery">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 mb-4">
+                            <div class="card">
+                                <img src="{{url_for('static', filename='2_Munar.jpg')}}" alt="" class="card-img-top">
+                                <div class="card-body">
+                                        <h3 class="card__title">Munnar Tea Gardens</h3>
+                                        <p class="card__text">
+                                            The hill station of Munnar is synonymous with rolling hills that are carpeted with verdant plantations of tea – a delicious beverage loved worldwide. This place is recognised for having some of the best and most beautiful
+                                        tea gardens across the globe.
+                                        </p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-4">
+                            <div class="card">
+                                <img src="{{url_for('static', filename='3_Palace.jpg')}}" alt="" class="card-img-top">
+                                <div class="card-body">
+                                </div>
+                                        <h3 class="card__title">Mysore Palace</h3>
+                                        <p class="card__text" >
+                                            The Mysore Palace, officially known as Mysuru Palace, is a historical palace and the royal residence (house) at Mysore in the Indian state of Karnataka. The palace is in the centre of Mysore, and faces the Chamundi
+                                        Hills eastward.
+                                        </p>
+                                </div>
+                            </div>
+                        <div class="col-lg-4 mb-4">
+                            <div class="card">
+                                <img src="{{url_for('static', filename='4_waterFall.jpg')}}" alt="" class="card-img-top">
+                                <div class="card-body">
+                                        <h3 class="card__title">Jog Falls</h3>
+                                        <p class="card__text">
+                                            Jog Falls is a waterfall on the Sharavati river located in the Western Ghats near Sagar Taluk of Uttara kannada District, Karnataka, India.It is the second highest plunge waterfall in India.It is a segmented waterfall
+                                        which depends on rain and season becomes a plunge waterfall</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </section>
+            <!--
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container-fluid">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">Adventure Awaits</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="Register.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                        <li><a href="Login Page.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    </ul>
+                </div>
+            </div>-->
+        </div>
+    </div>
+
+
+</body>
+
+</html>

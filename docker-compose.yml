@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  tourrecommendationmain:
+    image: tourrecommendationmain
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 5002:5002
