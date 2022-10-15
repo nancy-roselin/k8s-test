@@ -32,7 +32,7 @@ jobs:
     - name: Build, tag, and push image to Amazon ECR
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        ECR_REPOSITORY: tour
+        ECR_REPOSITORY: tour_github_actions
         IMAGE_TAG: tour
       run: |
         docker build -t tour .
